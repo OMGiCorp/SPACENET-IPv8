@@ -67,20 +67,20 @@ COUNTRY EXAMPLES FOLLOW:
 
 COUNTRY:	AUSTRALIA
 -------------------------------------------------------------------------------
-[EARTH][AUSTRALIA][DOMAIN NAME+ADDRESSES][]: *All gTLDs and ccTLDS and any other name* (usable inside Australia)
-[EARTH][AUSTRALIA][IPV4][]: 0.0.0.0 - 255.255.255.255 (usable inside Australia)
-[EARTH][AUSTRALIA][IPV6][]: 0000:0000:0000:0000:0000:0000:0000:0000 - ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff (usable inside Australia)
-[EARTH][AUSTRALIA][IPV8][]: All Addresses (OID) (usable inside Australia)
-
-COUNTRY:	CANADA
--------------------------------------------------------------------------------
-[EARTH][CANADA][DOMAIN NAME+ADDRESSES][]: *All gTLDs and ccTLDS and any other name* (usable inside Canada)
-[EARTH][CANADA][IPV4][]: 0.0.0.0 - 255.255.255.255 (usable inside Canada)
-[EARTH][CANADA][IPV6][]: 0000:0000:0000:0000:0000:0000:0000:0000 - ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff (usable inside Canada)
-[EARTH][CANADA][IPV8][]: All Addresses (OID) (usable inside Canada)
-[EARTH][CANADA][X25][SECURE][DATAPAC]: 91252 962
-
-
+[EARTH][AUSTRALIA][DOMAIN NAME+ADDRESSES][]: *All gTLDs and ccTLDS and any other name* (usable inside Australia)</P>
+[EARTH][AUSTRALIA][IPV4][]: 0.0.0.0 - 255.255.255.255 (usable inside Australia)</P>
+[EARTH][AUSTRALIA][IPV6][]: 0000:0000:0000:0000:0000:0000:0000:0000 - ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff (usable inside Australia)</P>
+[EARTH][AUSTRALIA][IPV8][]: All Addresses (OID) (usable inside Australia)</P>
+</P>
+COUNTRY:	CANADA</P>
+-------------------------------------------------------------------------------</P>
+[EARTH][CANADA][DOMAIN NAME+ADDRESSES][]: *All gTLDs and ccTLDS and any other name* (usable inside Canada)</P>
+[EARTH][CANADA][IPV4][]: 0.0.0.0 - 255.255.255.255 (usable inside Canada)</P>
+[EARTH][CANADA][IPV6][]: 0000:0000:0000:0000:0000:0000:0000:0000 - ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff (usable inside Canada)</P>
+[EARTH][CANADA][IPV8][]: All Addresses (OID) (usable inside Canada)</P>
+[EARTH][CANADA][X25][SECURE][DATAPAC]: 91252 962</P>
+</P>
+</P>
 
 COUTRY:		GERMANY
 -------------------------------------------------------------------------------
