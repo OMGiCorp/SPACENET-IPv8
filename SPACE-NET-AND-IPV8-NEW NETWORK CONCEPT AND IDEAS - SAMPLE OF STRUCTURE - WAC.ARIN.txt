@@ -65,6 +65,7 @@ COUNTRY:	AUSTRALIA
 [EARTH][AUSTRALIA][DOMAIN NAME+ADDRESSES][]: *All gTLDs and ccTLDS and any other name* (usable inside Australia)
 [EARTH][AUSTRALIA][IPV4][]: 0.0.0.0 - 255.255.255.255 (usable inside Australia)
 [EARTH][AUSTRALIA][IPV6][]: 0000:0000:0000:0000:0000:0000:0000:0000:0000:0000 - ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff (usable inside Australia)
+[EARTH][AUSTRALIA][IPV6][]: 0000:0000:0000:0000:0000:0000:0000:0000:0.0.0.0 - ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff:255.255.255.255 (usable inside Australia)
 [EARTH][AUSTRALIA][IPV8][]: All Addresses (OID) (usable inside Australia)
 
 COUNTRY:	CANADA
@@ -72,6 +73,7 @@ COUNTRY:	CANADA
 [EARTH][CANADA][DOMAIN NAME+ADDRESSES][]: *All gTLDs and ccTLDS and any other name* (usable inside Canada)
 [EARTH][CANADA][IPV4][]: 0.0.0.0 - 255.255.255.255 - ( 00.00.00.00 - ff.ff.ff.ff ) (usable inside Canada)
 [EARTH][CANADA][IPV6][]: 0000:0000:0000:0000:0000:0000:0000:0000:0000:0000 - ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff (usable inside Canada)
+[EARTH][CANADA][IPV6][]: 0000:0000:0000:0000:0000:0000:0000:0000:0.0.0.0 - ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff:255.255.255.255 (usable inside Canada)
 [EARTH][CANADA][IPV8][]: All Addresses (OID) (usable inside Canada)
 [EARTH][CANADA][X25][SECURE][DATAPAC]: 91252 962
 
@@ -81,6 +83,7 @@ COUTRY:		GERMANY
 [EARTH][GERMANY][DOMAIN NAME+ADDRESSES][]: *All gTLDs and ccTLDS and any other name* (usable inside Germany)
 [EARTH][GERMANY][IPV4][]: 0.0.0.0 - 255.255.255.255 (usable inside Germany)
 [EARTH][GERMANY][IPV6][]: 0000:0000:0000:0000:0000:0000:0000:0000:0000:0000 - ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff (usable inside Germany)
+[EARTH][GERMANY][IPV6][]: 0000:0000:0000:0000:0000:0000:0000:0000:0.0.0.0 - ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff:255.255.255.255 (usable inside Germany)
 [EARTH][GERMANY][IPV8][]: All Addresses (OID) (usable inside Germany)
 
 
@@ -90,6 +93,7 @@ COUNTRY:	JAPAN
 [EARTH][JAPAN][DOMAIN NAME+ADDRESSES][]: *All gTLDs and ccTLDS and any other name* (usable inside Japan)
 [EARTH][JAPAN][IPV4][]: 0.0.0.0 - 255.255.255.255 (usable inside Japan)
 [EARTH][JAPAN][IPV6][]: 0000:0000:0000:0000:0000:0000:0000:0000:0000:0000 - ffff:Ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff (usable inside Japan)
+[EARTH][JAPAN][IPV6][]: 0000:0000:0000:0000:0000:0000:0000:0000:0.0.0.0 - ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff:255.255.255.255 (usable inside Japan)
 [EARTH][JAPAN][IPV8][]: All Addresses (OID) (usable inside Japan)
 
 
@@ -98,6 +102,7 @@ COUNTRY:	UK (UNITED KINGDOM)
 [EARTH][UK][DOMAIN NAME+ADDRESSES][]: *All gTLDs and ccTLDS and any other name* (usable inside UK)
 [EARTH][UK][IPV4][]: 0.0.0.0 - 255.255.255.255 (usable inside UK)		0000:0000 - ffff:ffff
 [EARTH][UK][IPV6][]: 0000:0000:0000:0000:0000:0000:0000:0000:0000:0000 - ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff (usable inside UK)
+[EARTH][UK][IPV6][]: 0000:0000:0000:0000:0000:0000:0000:0000:0.0.0.0 - ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff:255.255.255.255 (usable inside UK)
 [EARTH][UK][IPV8][]: All Addresses (OID) (usable inside UK)
 
 
@@ -106,6 +111,7 @@ COUNTRY:	USA (UNITED STATES OF AMERICA)
 [EARTH][USA][DOMAIN NAME+ADDRESSES][]: *All gTLDs and ccTLDS and any other name* (usable inside USA)
 [EARTH][USA][IPV4][]: 0.0.0.0 - 255.255.255.255 (usable inside USA)
 [EARTH][USA][IPV6][]: 0000:0000:0000:0000:0000:0000:0000:0000:0000:0000 - ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff (usable inside USA)
+[EARTH][USA][IPV6][]: 0000:0000:0000:0000:0000:0000:0000:0000:0.0.0.0 - ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff:255.255.255.255 (usable inside USA)
 [EARTH][USA][IPV8][]: All Addresses (OID) (usable inside USA)
 [EARTH][USA][X25][SECURE][TYMNET]: 29105686 52
 
@@ -1110,6 +1116,7 @@ EXAMPLE:
 
 1.100.1.1.1.1.1.1.1.1.1.19241 			= SERVICE PROVIDER NETWORK
 1.100.1.1.1.1.1.1.1.1.1.19241.1045 		= SUBSCRIBER CONNECTION NUMBER/IPV8 ADDRESS
+1.100.1.1.1.1.1.1.1.1.1.19241.1099      = SUBSCRIBER CONNECTION NUMBER/IPV8 ADDRESS FOR MULTIHOMED CONNECTION
 
 NOTE: CUSTOMER CONTROLLED INTERNAL AND DMZ NETWORK AFTER: 1.100.1.1.1.1.1.1.1.1.1.19241.1045.X+
 
@@ -1866,5 +1873,6 @@ NOTE ITS BEING ATTACKED.
 
 
 ]
+
 
 
