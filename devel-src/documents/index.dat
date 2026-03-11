@@ -1,0 +1,69 @@
+# SPACE*NET protocol/service reference index
+# Format: TYPE|NAME|IDENTIFIER|RFC_OR_STANDARD|URL
+
+SERVICE|ftp-data|tcp/20|RFC 959|https://www.rfc-editor.org/rfc/rfc959
+SERVICE|ftp|tcp/21|RFC 959|https://www.rfc-editor.org/rfc/rfc959
+SERVICE|ssh|tcp/22|RFC 4251|https://www.rfc-editor.org/rfc/rfc4251
+SERVICE|telnet|tcp/23|RFC 854|https://www.rfc-editor.org/rfc/rfc854
+SERVICE|smtp|tcp/25|RFC 5321|https://www.rfc-editor.org/rfc/rfc5321
+SERVICE|domain|tcp/udp/53|RFC 1035|https://www.rfc-editor.org/rfc/rfc1035
+SERVICE|dhcp-server|udp/67|RFC 2131|https://www.rfc-editor.org/rfc/rfc2131
+SERVICE|dhcp-client|udp/68|RFC 2131|https://www.rfc-editor.org/rfc/rfc2131
+SERVICE|tftp|udp/69|RFC 1350|https://www.rfc-editor.org/rfc/rfc1350
+SERVICE|http|tcp/80|RFC 9110|https://www.rfc-editor.org/rfc/rfc9110
+SERVICE|pop3|tcp/110|RFC 1939|https://www.rfc-editor.org/rfc/rfc1939
+SERVICE|nntp|tcp/119|RFC 3977|https://www.rfc-editor.org/rfc/rfc3977
+SERVICE|ntp|udp/123|RFC 5905|https://www.rfc-editor.org/rfc/rfc5905
+SERVICE|imap|tcp/143|RFC 9051|https://www.rfc-editor.org/rfc/rfc9051
+SERVICE|snmp|udp/161|RFC 3411|https://www.rfc-editor.org/rfc/rfc3411
+SERVICE|snmptrap|udp/162|RFC 3411|https://www.rfc-editor.org/rfc/rfc3411
+SERVICE|bgp|tcp/179|RFC 4271|https://www.rfc-editor.org/rfc/rfc4271
+SERVICE|ldap|tcp/udp/389|RFC 4511|https://www.rfc-editor.org/rfc/rfc4511
+SERVICE|https|tcp/443|RFC 9110, RFC 8446|https://www.rfc-editor.org/rfc/rfc9110
+SERVICE|isakmp|udp/500|RFC 7296|https://www.rfc-editor.org/rfc/rfc7296
+SERVICE|syslog|udp/514|RFC 5424|https://www.rfc-editor.org/rfc/rfc5424
+SERVICE|ldaps|tcp/636|RFC 4511|https://www.rfc-editor.org/rfc/rfc4511
+SERVICE|ftps-data|tcp/989|RFC 4217|https://www.rfc-editor.org/rfc/rfc4217
+SERVICE|ftps|tcp/990|RFC 4217|https://www.rfc-editor.org/rfc/rfc4217
+SERVICE|imaps|tcp/993|RFC 9051|https://www.rfc-editor.org/rfc/rfc9051
+SERVICE|pop3s|tcp/995|RFC 8314|https://www.rfc-editor.org/rfc/rfc8314
+SERVICE|l2tp|udp/1701|RFC 2661|https://www.rfc-editor.org/rfc/rfc2661
+SERVICE|pptp|tcp/1723|RFC 2637|https://www.rfc-editor.org/rfc/rfc2637
+SERVICE|radius|udp/1812|RFC 2865|https://www.rfc-editor.org/rfc/rfc2865
+SERVICE|radius-acct|udp/1813|RFC 2866|https://www.rfc-editor.org/rfc/rfc2866
+SERVICE|nfs|tcp/udp/2049|RFC 8881|https://www.rfc-editor.org/rfc/rfc8881
+SERVICE|sip|tcp/udp/5060|RFC 3261|https://www.rfc-editor.org/rfc/rfc3261
+SERVICE|sips|tcp/5061|RFC 3261|https://www.rfc-editor.org/rfc/rfc3261
+SERVICE|mdns|udp/5353|RFC 6762|https://www.rfc-editor.org/rfc/rfc6762
+SERVICE|amqp|tcp/5672|OASIS AMQP 1.0|https://docs.oasis-open.org/amqp/core/v1.0/amqp-core-overview-v1.0.html
+SERVICE|amqps|tcp/5671|OASIS AMQP 1.0|https://docs.oasis-open.org/amqp/core/v1.0/amqp-core-overview-v1.0.html
+
+PROTOCOL|HOPOPT|0|RFC 8200|https://www.rfc-editor.org/rfc/rfc8200
+PROTOCOL|ICMP|1|RFC 792|https://www.rfc-editor.org/rfc/rfc792
+PROTOCOL|IGMP|2|RFC 2236|https://www.rfc-editor.org/rfc/rfc2236
+PROTOCOL|GGP|3|RFC 823|https://www.rfc-editor.org/rfc/rfc823
+PROTOCOL|IPv4|4|RFC 2003|https://www.rfc-editor.org/rfc/rfc2003
+PROTOCOL|ST|5|RFC 1190|https://www.rfc-editor.org/rfc/rfc1190
+PROTOCOL|TCP|6|RFC 9293|https://www.rfc-editor.org/rfc/rfc9293
+PROTOCOL|CBT|7|RFC 2189|https://www.rfc-editor.org/rfc/rfc2189
+PROTOCOL|EGP|8|RFC 888|https://www.rfc-editor.org/rfc/rfc888
+PROTOCOL|UDP|17|RFC 768|https://www.rfc-editor.org/rfc/rfc768
+PROTOCOL|DCCP|33|RFC 4340|https://www.rfc-editor.org/rfc/rfc4340
+PROTOCOL|IPv6|41|RFC 8200|https://www.rfc-editor.org/rfc/rfc8200
+PROTOCOL|RSVP|46|RFC 2205|https://www.rfc-editor.org/rfc/rfc2205
+PROTOCOL|GRE|47|RFC 2784|https://www.rfc-editor.org/rfc/rfc2784
+PROTOCOL|ESP|50|RFC 4303|https://www.rfc-editor.org/rfc/rfc4303
+PROTOCOL|AH|51|RFC 4302|https://www.rfc-editor.org/rfc/rfc4302
+PROTOCOL|ICMPv6|58|RFC 4443|https://www.rfc-editor.org/rfc/rfc4443
+PROTOCOL|NoNxt|59|RFC 8200|https://www.rfc-editor.org/rfc/rfc8200
+PROTOCOL|Opts|60|RFC 8200|https://www.rfc-editor.org/rfc/rfc8200
+PROTOCOL|OSPF|89|RFC 2328|https://www.rfc-editor.org/rfc/rfc2328
+PROTOCOL|L2TP|115|RFC 3931|https://www.rfc-editor.org/rfc/rfc3931
+PROTOCOL|SCTP|132|RFC 9260|https://www.rfc-editor.org/rfc/rfc9260
+PROTOCOL|UDPLite|136|RFC 3828|https://www.rfc-editor.org/rfc/rfc3828
+PROTOCOL|MPLS-in-IP|137|RFC 4023|https://www.rfc-editor.org/rfc/rfc4023
+PROTOCOL|Shim6|140|RFC 5533|https://www.rfc-editor.org/rfc/rfc5533
+PROTOCOL|Ethernet|143|RFC 8986|https://www.rfc-editor.org/rfc/rfc8986
+
+CATALOG|IANA Service Name and Port Number Registry|N/A|IANA|https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml
+CATALOG|IANA Protocol Numbers Registry|N/A|IANA|https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml

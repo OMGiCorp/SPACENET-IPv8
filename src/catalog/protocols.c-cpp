@@ -1,0 +1,123 @@
+#include "spacenet/protocols.h"
+
+#include <ctype.h>
+#include <string.h>
+
+#ifdef __cplusplus
+#include "spacenet/protocols.hpp"
+#include <cctype>
+#include <cstring>
+#endif
+
+static const spacenet_protocol_info_t kSpacenetProtocols[] = {
+    {"HOPOPT", 0, "Internet", "IPv6 Hop-by-Hop Option", "RFC 8200"},
+    {"ICMP", 1, "Internet", "Internet Control Message Protocol", "RFC 792"},
+    {"IGMP", 2, "Internet", "Internet Group Management Protocol", "RFC 2236"},
+    {"GGP", 3, "Internet", "Gateway-to-Gateway Protocol", "RFC 823"},
+    {"IPv4", 4, "Internet", "IPv4 encapsulation", "RFC 2003"},
+    {"ST", 5, "Internet", "Stream protocol", "RFC 1190"},
+    {"TCP", 6, "Transport", "Transmission Control Protocol", "RFC 9293"},
+    {"CBT", 7, "Internet", "CBT protocol", "RFC 2189"},
+    {"EGP", 8, "Internet", "Exterior Gateway Protocol", "RFC 888"},
+    {"IGP", 9, "Internet", "Any private interior gateway", "IANA"},
+    {"UDP", 17, "Transport", "User Datagram Protocol", "RFC 768"},
+    {"DCCP", 33, "Transport", "Datagram Congestion Control Protocol", "RFC 4340"},
+    {"IPv6", 41, "Internet", "IPv6 encapsulation", "RFC 8200"},
+    {"RSVP", 46, "Internet", "Resource Reservation Protocol", "RFC 2205"},
+    {"GRE", 47, "Internet", "Generic Routing Encapsulation", "RFC 2784"},
+    {"ESP", 50, "Security", "Encapsulating Security Payload", "RFC 4303"},
+    {"AH", 51, "Security", "Authentication Header", "RFC 4302"},
+    {"ICMPv6", 58, "Internet", "ICMP for IPv6", "RFC 4443"},
+    {"NoNxt", 59, "Internet", "IPv6 no next header", "RFC 8200"},
+    {"Opts", 60, "Internet", "IPv6 destination options", "RFC 8200"},
+    {"OSPF", 89, "Routing", "Open Shortest Path First", "RFC 2328"},
+    {"L2TP", 115, "Tunnel", "Layer Two Tunneling Protocol v3", "RFC 3931"},
+    {"SCTP", 132, "Transport", "Stream Control Transmission Protocol", "RFC 9260"},
+    {"UDPLite", 136, "Transport", "UDP-Lite", "RFC 3828"},
+    {"MPLS-in-IP", 137, "Internet", "MPLS-in-IP", "RFC 4023"},
+    {"Ethernet", 143, "Link", "Ethernet within IP", "RFC 8986"},
+    {"Shim6", 140, "Internet", "Site multihoming by IPv6 intermediation", "RFC 5533"}
+};
+
+static int ci_equal(const char *a, const char *b) {
+    while (*a && *b) {
+        if (tolower((unsigned char)*a) != tolower((unsigned char)*b)) {
+            return 0;
+        }
+        ++a;
+        ++b;
+    }
+    return *a == *b;
+}
+
+const spacenet_protocol_info_t *spacenet_protocols(void) {
+    return kSpacenetProtocols;
+}
+
+size_t spacenet_protocols_count(void) {
+    return sizeof(kSpacenetProtocols) / sizeof(kSpacenetProtocols[0]);
+}
+
+const spacenet_protocol_info_t *spacenet_find_protocol_by_name(const char *name) {
+    size_t i;
+    if (name == NULL) {
+        return NULL;
+    }
+    for (i = 0; i < spacenet_protocols_count(); ++i) {
+        if (ci_equal(kSpacenetProtocols[i].name, name)) {
+            return &kSpacenetProtocols[i];
+        }
+    }
+    return NULL;
+}
+
+const spacenet_protocol_info_t *spacenet_find_protocol_by_number(uint8_t number) {
+    size_t i;
+    for (i = 0; i < spacenet_protocols_count(); ++i) {
+        if (kSpacenetProtocols[i].number == number) {
+            return &kSpacenetProtocols[i];
+        }
+    }
+    return NULL;
+}
+
+#ifdef __cplusplus
+#include <algorithm>
+#include <vector>
+
+namespace spacenet {
+
+const std::vector<ProtocolInfo> &all_protocols() {
+    static const std::vector<ProtocolInfo> data(
+        kSpacenetProtocols,
+        kSpacenetProtocols + spacenet_protocols_count());
+    return data;
+}
+
+const ProtocolInfo *find_protocol(std::string_view name) {
+    auto lower = [](unsigned char c) { return static_cast<char>(std::tolower(c)); };
+    const auto &protocols = all_protocols();
+    auto it = std::find_if(protocols.begin(), protocols.end(), [&](const ProtocolInfo &protocol) {
+        if (name.size() != std::strlen(protocol.name)) {
+            return false;
+        }
+        for (size_t i = 0; i < name.size(); ++i) {
+            if (lower(static_cast<unsigned char>(name[i])) != lower(static_cast<unsigned char>(protocol.name[i]))) {
+                return false;
+            }
+        }
+        return true;
+    });
+    return it == protocols.end() ? nullptr : &(*it);
+}
+
+const ProtocolInfo *find_protocol(uint8_t number) {
+    const auto &protocols = all_protocols();
+    auto it = std::find_if(protocols.begin(), protocols.end(), [&](const ProtocolInfo &protocol) {
+        return protocol.number == number;
+    });
+    return it == protocols.end() ? nullptr : &(*it);
+}
+
+} // namespace spacenet
+#endif
